@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño y Desarrollo de Software</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div onclick="location.href='carreras.html'" class="regresa">
+            <img src="./imagenes/regresa.png" alt="regresa" width="25px">
+            Ir a carreras
+        </div>
+        <h2>Diseño y Desarrollo de Software</h2>
+        <button class="btn add-btn btn-dark " onclick="showForm()">Agregar Datos del Profesor</button>
+        <button class="btn view-btn btn-dark" onclick="showView()">Leer Datos del Profesor</button>
+
+        <div id="add-form" style="display:none;">
+            <form id="teacher-form">
+                <div class="form-section">
+                    <h3>Datos del Profesor</h3>
+                    <div class="form-group">
+                        <label for="name">Nombre Completo:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Años de Experiencia:</label>
+                        <input type="number" id="experience" name="experience" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="institutions">Instituciones donde Trabaja:</label>
+                        <input type="text" id="institutions" name="institutions" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="degrees">Títulos Académicos:</label>
+                        <input type="text" id="degrees" name="degrees" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="survey">Encuestas de Estudiantes:</label>
+                        <textarea id="survey" name="survey" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Foto:</label>
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                    </div>
+                    <button type="submit" class="btn">Guardar Datos</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="view-data" style="display:none;">
+            <form id="view-form">
+                <div class="form-group">
+                    <label for="view-name">Nombre del Profesor:</label>
+                    <input type="text" id="view-name" name="view-name" required>
+                </div>
+                <button type="submit" class="btn">Buscar Datos</button>
+            </form>
+            <div id="teacher-data"></div>
+        </div>
+    </div>
+</body>
+</html>
